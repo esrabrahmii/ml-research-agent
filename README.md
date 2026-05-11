@@ -4,6 +4,19 @@
 
 You type a research question. The agent makes a plan, runs the actual code in a sandbox, reflects on errors, and writes a report — all in a single web UI.
 
+## Screenshots
+
+<p align="center">
+  <img src="demo-pictures/image.png" width="800" alt="Research question intake" /><br/>
+  <img src="demo-pictures/image%20copy.png" width="800" alt="Live planning output" /><br/>
+  <img src="demo-pictures/image%20copy%202.png" width="800" alt="Sandbox execution" /><br/>
+  <img src="demo-pictures/image%20copy%203.png" width="800" alt="Reflection loop" /><br/>
+  <img src="demo-pictures/image%20copy%204.png" width="800" alt="Generated plots" /><br/>
+  <img src="demo-pictures/image%20copy%205.png" width="800" alt="Final report" /><br/>
+  <img src="demo-pictures/image%20copy%206.png" width="800" alt="Run history" /><br/>
+  <img src="demo-pictures/image%20copy%207.png" width="800" alt="Knowledge integration" />
+</p>
+
 ## Demo
 
 Type a question like *"Does LoRA rank affect GSM8K accuracy on Pythia-160M?"* and watch the agent:
