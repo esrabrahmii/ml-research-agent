@@ -42,15 +42,15 @@ make run
 
 The app works in **demo mode without a key** — the planner streams a hard-coded plan so you can see the UI immediately. With a Groq key, it uses Llama 3.3 70B for real planning.
 
-## Roadmap
+## How it works
 
-| Week | Feature |
-|---|---|
-| 1 ✅ | Streamlit 4-panel UI · streaming Groq planner |
-| 2 | LangGraph state machine · e2b sandbox executor |
-| 3 | Critic + reflection loop |
-| 4 | Final report writer · arXiv RAG (citations) |
-| 5 | Knowledge graph · benchmark dashboard · cloud deploy |
+- **LangGraph state machine** — the agent loop (`plan → execute → reflect → report`) is a graph with conditional edges; reflection can route back into planning when execution fails.
+- **Streaming planner** — Groq Llama 3.3 70B emits the plan token-by-token; the Streamlit UI mirrors the stream live so you can watch the model think.
+- **Sandboxed execution** — generated Python runs in an e2b microVM. Stdout, stderr, generated files, and saved plots are captured back into the agent state.
+- **Reflection loop** — on error, the critic receives the traceback + plan and either patches the code or revises the plan before the next attempt.
+- **Report writer** — final markdown report cites arXiv abstracts retrieved via lightweight RAG, with the produced plots embedded inline.
+- **Tracking** — MLflow logs each experiment as a run with hyperparameters + metrics + artifacts; LangSmith traces the full agent reasoning chain.
+- **Demo-mode fallback** — without an API key, the planner streams a hard-coded plan so the UI is immediately interactive.
 
 ## Stack
 
