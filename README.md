@@ -52,6 +52,9 @@ The app works in **demo mode without a key** — the planner streams a hard-code
 - **Tracking** — MLflow logs each experiment as a run with hyperparameters + metrics + artifacts; LangSmith traces the full agent reasoning chain.
 - **Demo-mode fallback** — without an API key, the planner streams a hard-coded plan so the UI is immediately interactive.
 
+
+<img width="520" height="791" alt="image" src="https://github.com/user-attachments/assets/559c0cf1-4b8f-41e2-95ad-03faab141242" />
+
 ## Stack
 
 - **LLM**: Groq (Llama 3.3 70B, free)
